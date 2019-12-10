@@ -5,19 +5,20 @@
 
 int main()
 {
-    int i,j,len;
+    int i,j,len,choice;
     char str[100];
     int max=-1;
 
-    int freg[256]={0};
+
     /*
     for(i=0;i<=10;i++)
     {
         printf("%d ",freg[i]);
     }
     */
-
-    printf("Enter the string -> ");
+    do{
+    int freg[256]={0};
+    printf("\nEnter the string -> ");
     fflush(stdin);
     gets(str);
     strlwr(str); //lower string
@@ -46,6 +47,9 @@ int main()
             printf("Char %c: %d\n",i,freg[i]);
         }
     }
+    printf("\nWould you like to continue or Press ESC to exit ");
+    choice = getch();
+    }while(choice !=27);
 
     return 0;
 
