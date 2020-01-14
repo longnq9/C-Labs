@@ -8,8 +8,12 @@ int main()
     char choice;
 
     do{
-    printf("\nPlease enter a number (1-9): ");
-    scanf("%d",&number);
+    printf("\nPlease enter a number (1-9): "); scanf("%d",&number);
+    while(number < 1 || number > 9)
+    {
+        printf("Please enter a number (1-9): "); scanf("%d",&number);
+    }
+
 
     printf("Multiplication table for %d number\n",number);
     for(i=0;i<=10;i++)
